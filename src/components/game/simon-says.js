@@ -36,6 +36,7 @@ export default function index({
           align-items: center;
           color: #fff;
           border: 1vmin #eee solid;
+          transition-duration: 0.2s;
         }
       `}</style>
       <style jsx>{`
