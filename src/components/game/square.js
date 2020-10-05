@@ -10,10 +10,9 @@ export default function index({
 }) {
   return (
     <>
-      <div className="container">
+      <div className="container" onClick={!!Action && Action}>
         <div
           className="square"
-          onClick={!!Action && Action}
           style={{
             background: `${visible ? pieces[fruit].color : `#eee`}`,
           }}

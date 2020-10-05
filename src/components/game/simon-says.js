@@ -24,7 +24,6 @@ export default function index({
           display: flex;
           justify-content: center;
           align-items: center;
-          cursor: pointer;
         }
         .square {
           border-radius: 6px;
