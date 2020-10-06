@@ -122,16 +122,19 @@ export default function index() {
       <div className="holder">
         <div className="info">
           <SimonSays fruit={simonSaysFruit} visible={true} />
-          {score}
+          <span className="score">
+            {gameState === 'lost' && `You scored `}
+            {score}
+          </span>
         </div>
         <div className="container">
-          {gameState === 'lost' && `You scored ${score}`}
           {gameState !== 'playing' ? (
             <button
               onClick={() => {
                 SetScore(0);
                 GameplayLoop(1, 2, 4, 1500, 3000);
               }}
+              className="start-button"
             >
               Start Game
             </button>
@@ -151,26 +154,24 @@ export default function index() {
             ))
           )}
         </div>
-        <div className="after"></div>
       </div>
       <style jsx>{`
         .holder {
           display: flex;
-          justify-content: space-between;
-          width: 100%;
+          height: 100vh;
+          width: 100vw;
           flex-direction: column;
+          align-items: center;
         }
-        @media (min-width: 768px) {
-          .holder {
-            flex-direction: row;
-          }
-        }
+
         .info {
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: start;
-          max-width: 100vmin;
+          align-items: center;
+          text-align: center;
+          width: 240px;
         }
         .container {
           display: flex;
@@ -181,8 +182,26 @@ export default function index() {
           height: 100vmin;
           flex-wrap: wrap;
         }
-        .after {
-          max-width: 100vmin;
+        .score {
+          font-size: 2rem;
+          color: grey;
+        }
+        .start-button {
+          color: grey;
+          font-size: 2rem;
+          cursor: pointer;
+          border: 2px solid #bdbdbd;
+          border-radius: 6px;
+          padding: 10px 20px;
+        }
+        @media (min-width: 768px) {
+          .holder {
+            flex-direction: row;
+            align-items: start;
+            justify-content: center;
+          }
+          .info {
+          }
         }
       `}</style>
     </>
