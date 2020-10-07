@@ -1,49 +1,32 @@
 {
-  "name": "Emaileditor",
-  "version": "0.0.1",
-  "description": "Online tool to create HTML emails",
+  "name": "Fruitmatch",
+  "version": "1.0.0",
+  "description": "Online fruit minigame",
   "main": "index.js",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "export": "next build && next export",
     "start": "next start",
-    "generate-sitemap": "node src/scripts/generate-sitemap.js",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "shake": "npm-check -u"
   },
-  "keywords": [
-    "email",
-    "tool"
-  ],
   "author": "Jake Warburton",
   "license": "ISC",
   "dependencies": {
-    "@sendgrid/mail": "^7.2.4",
-    "bcrypt": "^5.0.0",
-    "dotenv": "^8.2.0",
-    "dotenv-webpack": "^1.7.0",
-    "lodash": "^4.17.19",
-    "mongoose": "^5.9.28",
-    "next": "^9.5.0",
-    "react": "^16.13.1",
-    "react-color": "^2.18.1",
-    "react-css-burger": "^0.2.0",
-    "react-dom": "^16.11.0",
-    "react-icons": "^3.11.0",
-    "react-redux": "^7.1.1",
-    "react-spinners": "^0.9.0",
-    "react-zoom-pan-pinch": "^1.6.1",
-    "redux": "^4.0.5",
-    "redux-devtools-extension": "^2.13.8",
-    "uuid": "^8.2.0"
+    "dotenv": "8.2.0",
+    "dotenv-webpack": "1.7.0",
+    "next": "9.5.0",
+    "react": "16.13.1",
+    "react-dom": "16.11.0",
+    "react-icons": "3.11.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/preset-env": "^7.6.3",
-    "babel-plugin-module-resolver": "^3.2.0",
-    "npm-check": "^5.9.0",
-    "prettier": "^1.18.2"
+    "@babel/core": "7.6.4",
+    "@babel/preset-env": "7.6.3",
+    "babel-plugin-module-resolver": "3.2.0",
+    "npm-check": "5.9.0",
+    "prettier": "1.18.2"
   }
 }
